@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Hello Plunker!</h1>
+    Макрос-это записанная последовтельность команд, которую затем выполняяе excel.
+    Сначала я создала макрос по примеру видеоролика.
+     Вот его код.Sub сайт()
+'
+' сайт Макрос
+'
+' Сочетание клавиш: Ctrl+й
+'
+    ActiveCell.FormulaR1C1 = "akademia-excel.ru"
+   
+End Sub
+     Я создала имя макроса и задала сочетание клавиш,с помощью которого мы можем скопировать любую команду в любую ячейку таблицы.
+    Далее таким же образлм я создала второй макрос.Sub Макрос2()
+'
+' Макрос2 Макрос
+'
+' Сочетание клавиш: Ctrl+л
+'
+    Cells.Replace What:="akademia", Replacement:="school", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+        После чего "akademia-excel.ru" заминоль на "school" и изменился стиль и размер шрифта.
+End Sub
+
+
+  </body>
+
+</html>
