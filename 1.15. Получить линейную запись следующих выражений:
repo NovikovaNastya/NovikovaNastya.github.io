@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=windows-1251">
+<title>Стили</title>
+<style> p {background-color: #fff;
+        margin: 20px auto;
+        font-family: Arial;
+        font-size: 2em; 
+        text-transform: uppercase;
+        color: rgba(0,168,255,0.5);
+        text-shadow: 8px 8px 0 rgba(255,0,180,0.5);}
+</style>
+<script>
+function er(){
+document.getElementById("out1").value="1/x^2";
+document.getElementById("out2").value="a/(b*c)";
+document.getElementById("o3").value="Ты просто космос Стас";
+document.getElementById("inf1").innerHTML ="<p>"+"1/x^2"+"</p>";
+document.getElementById("inf2").innerHTML ="<p>"+"a/(b*c)"+"</p>";
+document.getElementById("inf3").innerHTML ="<p>"+"Ты просто космос Стас"+"</p>";
+}
+</script>
+</head>
+<body>
+<button onclick="er()">1.15</button>
+<br>
+<br>
+А)<input type="-1/x^2" value="-1/x^2" id="out1">
+<br>
+<br>
+Б)<input type="a/" value="a/bc" id="out2">
+<br>
+<br>
+В)<input type="text" value="a/b*c" id="o3">
+<br>
+<br>
+г)<input type="text" value="(a+b)/2" id="o4">
+<div id="inf1"></div>
+<div id="inf2"></div>
+<div id="inf3"></div>
+</body>
+</html>
+<br>
+д)<input type="text" value="5,45*(a+2b)/(2-a)" id="o5">
+<br>
+<br>
+Е)<input type="text" value="-b+1/2*(b^2-4ac)" id="o6">
+<br>
+<br>
+ж)<input type="text" value="(-b+1/a)/2/c" id="o7">
+  </body>
+<br>
+<br>
+3)<input type="text" value="1/1+1/2+1/(2+3/5)" id="o8">
+<br>
+<br>
+и)<input type="text" value="1/(1+1/)+1/(2+2/3)" id="o9">
+<br>
+<br>
+К)<input type="text" value="2^n^m" id="10">
