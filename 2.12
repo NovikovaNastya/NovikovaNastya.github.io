@@ -2,14 +2,7 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
 
-  <body>
-    <html>
-
-<head>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
   <title>Стили</title>
   <style>
@@ -89,20 +82,22 @@
   </style>
   <script>
     function er() {
-      var ab = Number(document.getElementById("var_in").value);
-document.getElementById("inf1").innerHTML ="";
-      document.getElementById("inf1").innerHTML = "десятков" + (ab - ab % 10) / 10 + единиц " + ab % 10 + "<br>их сумма=" + (ab % 10 + (ab - ab % 10) / 10) + "<br>их произведение=" + (ab % 10 * (ab - ab % 10) / 10);
+      document.getElementById("inf1").textContent =""
+      var abc = document.getElementById("var_in").value;
+      document.getElementById("inf1").innerHTML = 
+      "сотен" + (abc- abc % 100) / 100 +
+      "<br>десятков " + ((abc - abc % 10) / 10 -(abc - abc % 100) / 10) + 
+      "<br>единиц " + abc % 10 +
+      "<br>их сумма=" 
+      + (abc % 10 + ((abc - abc % 100) / 100 ))
+      + (( abc - abc % 10 )/ 10 - (abc - abc % 100 /10) + abc % 10) 
+      +
+      "<br>их произведение=" 
+      + ((abc % 10 * (abc - abc % 100) / 100) * ((abc - abc % 10) / 10 - (abc % 10)));
     }
- function er1() {
-      var abc = Number(document.getElementById("var_in").value);
-document.getElementById("inf1").innerHTML ="";
-      document.getElementById("inf1").innerHTML = "сотен" + (abc - abc100) / 111 + "<br>десятков " %  + ((abс - abс % 10ab % 10 + "<br>/ 10 + "единиц" + сумма=" + (ab % 10 + (ab - ab % 10) / 10) -(abc-abc % 100 / 10) + abc % 10) + "<br>их произведение" 10) / 10) + "<br>единиц" + abc % 10 + "<br>их сумма=" + ((abc - abc % 100) / 100 + ((abc - abc % 10) / 10 - (abc - abc % 100) / 10) + abc % 10) + "<br>их произведение=" +(((abc - abc % 100) / 100) * ((abc - abc % 10) / 10 - (abc - abc % 100) / 10) * (abc % 10));
-    }
-    function er3() {
-      var ab = document.getElementById("var_in").value;
-document.getElementById("inf1").textContent = "";
-      document.getElementById("inf1").textContent = ab + "ABC";
-    }
+
+
+    
   </script>
 </head>
 
@@ -111,7 +106,7 @@ document.getElementById("inf1").textContent = "";
   <a class="button8" onclick="er1()">2.12</a>
   <a class="button8" onclick="er3()">Любая</a>
   <div class="layer1">
-    <input type="text" value="57" id="var_in">
+    <input type="text" value="570" id="var_in">
     <br>
   </div>
   <div class="gradient">
@@ -119,13 +114,5 @@ document.getElementById("inf1").textContent = "";
   </div>
 
 </body>
-
-</html>
-
-
-
-
-
-  </body>
 
 </html>
