@@ -7,7 +7,7 @@
   <title>Стили</title>
   <style>
     @font-face {
-      font-family: "Fairy";
+      font-family: "Arial";
       src: url(https://berdges86.github.io/Fairy_Tale.ttf);
     }
     
@@ -16,7 +16,7 @@
       flex-wrap: wrap;
       align-content: space-between;
       overflow: hidden;
-      background: linear-gradient(45deg, blue, gold, lightgreen, gold, red);
+      background: radial-gradient(green, white);
       mix-blend-mode: multiply;
     }
     
@@ -95,9 +95,18 @@
       "<br>их произведение=" 
       + ((abc % 10 * (abc - abc % 100) / 100) * ((abc - abc % 10) / 10 - (abc % 10)));
     }
-
-
     
+    function er1() {
+      document.getElementById("inf1").textContent =""
+      var abc = document.getElementById("var_in").value;
+      document.getElementById("inf1").innerHTML = 
+      "<br>единиц: " + abc +
+      "<br>десятков: " + ((abc - abc % 10) / 10) + 
+      "<br>сумма цифр: " + (abc % 10 + ((abc - abc % 10) / 10) % 10 + 
+      (abc - abc % 100) / 100) +
+      "<br>произведение цифр:" 
+      + ((abc % 10) * (((abc - abc % 10) / 10) % 10) * ((abc - abc % 100) / 100));
+    }
   </script>
 </head>
 
