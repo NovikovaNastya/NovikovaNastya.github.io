@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Стили</title>
+  <style>
+    @font-face {
+      font-family: "Fairy";
+      src: url(https://berdges86.github.io/Fairy_Tale.ttf);
+    }
+    
+    body {
+      display: inline-block;
+      flex-wrap: wrap;
+      align-content: space-between;
+      overflow: hidden;
+      background: linear-gradient(45deg, blue, gold, lightgreen, gold, red);
+      mix-blend-mode: multiply;
+    }
+    
+    .gradient {
+      text-align: left;
+      font-size: 32px;
+      font-family: Fairy;
+      letter-spacing: 5px;
+    }
+    
+    .spotlight {
+      background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: rainbow_animation 6s ease-in-out infinite;
+      background-size: 400% 100%;
+    }
+    
+    @keyframes rainbow_animation {
+      0%, 100% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+    }
+    
+    a.button8 {
+      display: inline-block;
+      padding: 0.2em 1.45em;
+      margin: 0.1em;
+      border: 0.15em solid #CCCCCC;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Fairy';
+      font-weight: 400;
+      color: #000000;
+      background-color: #CCCCCC;
+      text-align: center;
+      position: relative;
+    }
+    
+    a.button8:hover {
+      border-color: #7a7a7a;
+      position: relative;
+    }
+    
+    a.button8:active {
+      background-color: #999999;
+      position: relative;
+    }
+    
+    @media all and (max-width:30em) {
+      a.button8 {
+        display: block;
+        margin: 0.2em auto;
+      }
+      .layer1 {
+        position: fixed;
+      }
+    }
+  </style>
+  <script>
+    function er() {
+      document.getElementById("inf1").textContent =""
+      var abc = document.getElementById("var_in").value;
+      var third = (abc % 10)
+      var second = ((abc % 100) - third) / 10
+      var first = (abc - second * 10 - third) / 100
+      document.getElementById("inf1").innerHTML = 
+      "<br>Число 1: " + first + second + third +
+      "<br>Число 2: " + first + third + second +
+      "<br>Число 3: " + second + first + third +
+      "<br>Число 4: " + second + third + first +
+      "<br>Число 5: " + third + first + second +
+      "<br>Число 6: " + third + second + first;
+    }
+    
+  </script>
+</head>
+
+<body>
+  <a class="button8" onclick="er()">2.18</a>
+  <div class="layer1">
+    <input type="text" value="570" id="var_in">
+    <br>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf1"></div>
+  </div>
+
+</body>
+
+</html>
