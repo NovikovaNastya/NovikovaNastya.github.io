@@ -1,0 +1,118 @@
+<!doctype html>
+
+<style>
+  a.button8 {
+    display: inline-block;
+    padding: 0.2em 1.45em;
+    margin: 0.1em;
+    border: 0.15em solid #CCCCCC;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Fairy';
+    font-weight: 400;
+    color: #000000;
+    background-color: #CCCCCC;
+    text-align: center;
+    position: relative;
+  }
+  
+  a.button8:hover {
+    border-color: #7a7a7a;
+    position: relative;
+  }
+  
+  a.button8:active {
+    background-color: #999999;
+    position: relative;
+  }
+  
+  @media all and (max-width:30em) {
+    a.button8 {
+      display: block;
+      margin: 0.2em auto;
+    }
+    .layer1 {
+      position: fixed;
+    }
+  }
+</style>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="lib/style.css">
+  <script src="lib/script.js"></script>
+  <script>
+    function taskA() {
+      document.getElementById('div_a').style.display = 'none';
+      document.getElementById('div_b').style.display = 'none';
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 20; i <= 35; i++) {
+        document.getElementById("inf1").innerHTML += i + "<br>"
+      }
+    }
+
+    function taskB() {
+      document.getElementById('div_a').style.display = 'none';
+      document.getElementById('div_b').style.display = 'block';
+      document.getElementById("inf1").innerHTML = ""
+      var b = document.getElementById("input_b").value;
+      if (b < 10) {
+        document.getElementById("inf1").innerHTML = "Введите число, большее или равное 10!"
+      } else {
+        for (let i = 10; i <= b; i++) {
+          document.getElementById("inf1").innerHTML += i * i + "<br>"
+        }
+      }
+    }
+
+    function taskV() {
+      document.getElementById('div_a').style.display = 'block';
+      document.getElementById('div_b').style.display = 'none';
+      document.getElementById("inf1").innerHTML = ""
+      var a = document.getElementById("input_a").value;
+      if (a > 50) {
+        document.getElementById("inf1").innerHTML = "Введите число, меньшее или равное 51!"
+      } else {
+        for (let i = a; i <= 50; i++) {
+          document.getElementById("inf1").innerHTML += i * i * i + "<br>"
+        }
+      }
+    }
+
+    function taskG() {
+      document.getElementById('div_a').style.display = 'block';
+      document.getElementById('div_b').style.display = 'block';
+      document.getElementById("inf1").innerHTML = ""
+      var a = parseInt(document.getElementById("input_a").value, 10);
+      var b = parseInt(document.getElementById("input_b").value, 10);
+      if (a > b) {
+        document.getElementById("inf1").innerHTML = "Число b должно быть не меньше числа a!"
+      } else {
+        for (let i = a; i <= b; i++) {
+          document.getElementById("inf1").innerHTML += i + "<br>"
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <a class="button8" onclick="taskA()">А</a>
+  <a class="button8" onclick="taskB()">Б</a>
+  <a class="button8" onclick="taskV()">В</a>
+  <a class="button8" onclick="taskG()">Г</a>
+  <div class="layer1" id="div_a" display="none">
+    a:
+    <input type="text" value="0" id="input_a">
+    <br>
+  </div>
+  <div class="layer1" id="div_b">
+    b:
+    <input type="text" value="12" id="input_b">
+    <br>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf1"></div>
+  </div>
+</body>
