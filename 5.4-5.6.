@@ -1,0 +1,133 @@
+  <!doctype html>
+
+<style>
+  a.button8 {
+    display: inline-block;
+    padding: 0.2em 1.45em;
+    margin: 0.1em;
+    border: 0.15em solid #CCCCCC;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Fairy';
+    font-weight: 400;
+    color: #000000;
+    background-color: #CCCCCC;
+    text-align: center;
+    position: relative;
+  }
+  
+  a.button8:hover {
+    border-color: #7a7a7a;
+    position: relative;
+  }
+  
+  a.button8:active {
+    background-color: #999999;
+    position: relative;
+  }
+  
+  @media all and (max-width:30em) {
+    a.button8 {
+      display: block;
+      margin: 0.2em auto;
+    }
+    .layer1 {
+      position: fixed;
+    }
+  }
+</style>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="lib/style.css">
+  <script src="lib/script.js"></script>
+  <script>
+    function task5_4a() {
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 10; i <= 26; i++) {
+        document.getElementById("inf1").innerHTML += i + " " + i + "." + 4 + "<br>"
+      }
+    }
+
+    function task5_4b() {
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 25; i <= 35; i++) {
+        document.getElementById("inf1").innerHTML += i + " " + i + "." + 5 + 
+        " " + (i - 1) + "." + 8 + "<br>"
+      }
+    }
+
+    function task5_5a() {
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 21; i >= 10; i--) {
+        document.getElementById("inf1").innerHTML += i + " " + (i - 2) + "." + 2 + "<br>"
+      }
+    }
+
+    function task5_5b() {
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 45; i >= 25; i--) {
+        document.getElementById("inf1").innerHTML += i + " " + (i - 1) + "." + 5 + " " + (i - 1) + "." + 2 + "<br>"
+      }
+    }
+
+    function task5_6a() {
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 21; i <= 35; i++) {
+        document.getElementById("inf1").innerHTML += i + " " + (i - 1) + "." + 4 + "<br>"
+      }
+    }
+
+    function task5_6b() {
+      document.getElementById("inf1").innerHTML = ""
+      for (let i = 16; i <= 24; i++) {
+        document.getElementById("inf1").innerHTML += i + " " + (i - 1) + "." + 5 + " " + i + "." + 8 + "<br>"
+      }
+    }
+
+    function taskV() {
+      document.getElementById('div_a').style.display = 'block';
+      document.getElementById('div_b').style.display = 'none';
+      document.getElementById("inf1").innerHTML = ""
+      var a = document.getElementById("input_a").value;
+      if (a > 50) {
+        document.getElementById("inf1").innerHTML = "Введите число, меньшее или равное 51!"
+      } else {
+        for (let i = a; i <= 50; i++) {
+          document.getElementById("inf1").innerHTML += i * i * i + "<br>"
+        }
+      }
+    }
+
+    function taskG() {
+      document.getElementById('div_a').style.display = 'block';
+      document.getElementById('div_b').style.display = 'block';
+      document.getElementById("inf1").innerHTML = ""
+      var a = parseInt(document.getElementById("input_a").value, 10);
+      var b = parseInt(document.getElementById("input_b").value, 10);
+      if (a > b) {
+        document.getElementById("inf1").innerHTML = "Число b должно быть не меньше числа a!"
+      } else {
+        for (let i = a; i <= b; i++) {
+          document.getElementById("inf1").innerHTML += i + "<br>"
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <a class="button8" onclick="task5_4a()">5.4(а)</a>
+  <a class="button8" onclick="task5_4b()">5.4(б)</a>
+  <a class="button8" onclick="task5_5a()">5.5(а)</a>
+  <a class="button8" onclick="task5_5b()">5.5(б)</a>
+  <a class="button8" onclick="task5_6a()">5.6(а)</a>
+  <a class="button8" onclick="task5_6b()">5.6(б)</a>
+  <a class="button8" onclick="taskG()">Г</a>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf1"></div>
+  </div>
+</body>
+
+</html>
